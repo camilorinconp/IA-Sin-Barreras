@@ -175,6 +175,17 @@ const Sidebar = React.forwardRef<
   ) => {
     const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
+    if (isMobile === undefined) {
+      return (
+        <div className="hidden md:block text-sidebar-foreground w-[--sidebar-width] p-2">
+            <div className="flex flex-col gap-2 h-full w-full">
+                <Skeleton className="h-8 w-full" />
+                <Skeleton className="h-full w-full" />
+            </div>
+        </div>
+      )
+    }
+
     if (collapsible === "none") {
       return (
         <div
