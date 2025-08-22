@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +54,13 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Custom brand colors
+				brand: {
+					electric: 'hsl(var(--brand-electric))',
+					emerald: 'hsl(var(--brand-emerald))',
+					'gray-dark': 'hsl(var(--brand-gray-dark))',
+					'gray-medium': 'hsl(var(--brand-gray-medium))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
