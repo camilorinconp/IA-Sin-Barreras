@@ -22,6 +22,16 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://iasinbarreras.co/" />
+
+    <script>
+      (function() {
+        const redirect = sessionStorage.getItem('redirect');
+        sessionStorage.removeItem('redirect');
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
 
   <body>
